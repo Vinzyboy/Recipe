@@ -1,0 +1,802 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
+
+:root {
+  --font-primary: "Mulish", sans-serif;
+  --font-secondary: "Playfair Display", serif;
+  --clr-accent: #d9964a;
+  --clr-blue: #0b5089;
+  --clr-dark: #2b2b2b;
+  --clr-light: #ffffff;
+  --clr-border: #f9e9d7;
+  --clr-gray: #666666;
+
+  --h1: 90px;
+  --h2: 33px;
+  --h3: 24px;
+  --h4: 16px;
+  --h5: 12px;
+  --h6: 10px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+  scroll-behavior: smooth;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  color: var(--clr-dark);
+  font-family: var(--font-primary);
+  /* font-family: var(--PlayfairDisplay); */
+  font-size: 1.6rem;
+  overflow-x: hidden;
+  line-height: 1.4;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+time {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 5rem;
+}
+
+/* HEADER */
+.header {
+  padding: 2rem 0;
+}
+.header__logo {
+  font-size: var(--h3);
+  font-family: var(--font-primary);
+}
+.header__logo h3 {
+  font-weight: 700;
+}
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__nav {
+  display: flex;
+  gap: 3rem;
+}
+.header__nav li a {
+  display: flex;
+  color: var(--clr-dark);
+  justify-content: space-between;
+  font-family: var(--font-primary);
+}
+
+/* BANNER */
+.banner {
+  display: flex;
+  padding: 5rem 0;
+  background-color: var(--clr-border);
+}
+.banner__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+.banner__wrapper small {
+  color: var(--clr-accent);
+  letter-spacing: 1rem;
+}
+.banner__wrapper h2 {
+  font-size: var(--h2);
+  font-family: var(--font-secondary);
+  padding: 2rem 0;
+}
+.banner__wrapper p {
+  max-width: 50rem;
+  margin-bottom: 1rem;
+  /* font-size: 1rem; */
+}
+.banner__wrapper a {
+  background-color: var(--clr-accent);
+  border: none;
+  color: var(--clr-light);
+}
+.banner__wrapper a:hover {
+  background-color: var(--clr-dark);
+  border: none;
+  color: var(--clr-light);
+  height: 3rem;
+  width: 12rem;
+}
+.banner .image {
+  width: 60rem;
+  align-items: center;
+}
+
+/* RECIPE OF THE WEEK */
+.recipe {
+  padding: 5rem 0;
+}
+.recipe__title {
+  font-family: var(--font-secondary);
+  color: var(--clr-accent);
+  font-size: var(--h3);
+  text-align: center;
+}
+.recipe__title h3::before {
+  content: " ";
+  display: inline-block;
+  position: relative;
+  width: 40rem;
+  height: 0.2rem;
+  background-color: var(--clr-accent);
+  right: 1rem;
+  bottom: 0.5rem;
+}
+.recipe__title h3::after {
+  content: " ";
+  display: inline-block;
+  position: relative;
+  width: 40rem;
+  height: 0.2rem;
+  background-color: var(--clr-accent);
+  left: 1rem;
+  bottom: 0.5rem;
+}
+.recipe__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  text-align: center;
+}
+.card img {
+  height: 40rem;
+}
+.card__details li small {
+  color: var(--clr-accent);
+  font-family: var(--font-primary);
+  letter-spacing: 1rem;
+}
+.card__details li a {
+  font-family: var(--font-secondary);
+  color: var(--clr-dark);
+}
+.card__details li p {
+  text-align: justify;
+  margin-top: 1rem;
+}
+.name li:first-child {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* RECIPE COLLECTION */
+.recipeCollection {
+  padding: 5rem 0;
+}
+.recipeCollection__title {
+  font-family: var(--font-secondary);
+  font-size: var(--h3);
+  color: var(--clr-accent);
+}
+.recipeCollection__title h3::after {
+  content: " ";
+  display: inline-block;
+  position: relative;
+  width: 100rem;
+  height: 0.2rem;
+  background-color: var(--clr-accent);
+  right: -1rem;
+  bottom: 0.5rem;
+}
+.recipeCollection__wrapper {
+  margin: 0 auto;
+}
+.types {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8rem;
+  margin-bottom: 10rem;
+}
+.types__img {
+  width: 60rem;
+  height: 40rem;
+}
+.types:nth-child(even) {
+  flex-direction: row-reverse;
+  display: flex;
+  align-items: center;
+  gap: 7.5rem;
+  margin-bottom: 5rem;
+}
+.types:nth-child(odd)::before {
+  display: block;
+  position: absolute;
+  width: 38%;
+  height: 49rem;
+  left: 0;
+  z-index: -18;
+}
+.types:nth-child(even)::after {
+  display: block;
+  position: absolute;
+  flex-direction: row-reverse;
+  width: 38%;
+  height: 49rem;
+  right: 0;
+  z-index: -18;
+}
+.types__txt {
+  text-align: justify;
+  margin-bottom: 3rem;
+  max-width: 45%;
+  align-items: center;
+}
+.types__txt small {
+  color: var(--clr-accent);
+  letter-spacing: 1rem;
+  margin-bottom: 1rem;
+}
+.types li a {
+  color: var(--clr-dark);
+  margin-bottom: 1rem;
+}
+.types li h2 {
+  font-family: var(--font-secondary);
+  font-size: var(--h2);
+  margin-bottom: 1rem;
+}
+.types button {
+  background-color: var(--clr-accent);
+  border: none;
+  color: var(--clr-light);
+  height: 3rem;
+  width: 12rem;
+  margin-top: 2rem;
+}
+.types button:hover {
+  background-color: var(--clr-dark);
+  border: none;
+  color: var(--clr-light);
+  height: 3rem;
+  width: 12rem;
+  margin-top: 2rem;
+}
+
+/* CTA */
+.cta {
+  background: linear-gradient(rgba(45, 45, 45, 0.5), rgba(45, 45, 45, 0.5)),
+    url(./recipe/recipe/images/bell_pepper.jpeg);
+  height: 55vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* for details */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+.cta h2 {
+  font-family: var(--font-secondary);
+  font-size: var(--h2);
+  color: var(--clr-light);
+}
+.cta p {
+  color: var(--clr-light);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.cta__wrapper form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.cta__wrapper textarea {
+  opacity: 60%;
+  width: 40rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+}
+.cta__wrapper button {
+  background-color: var(--clr-accent);
+  border: none;
+  color: var(--clr-light);
+  height: 4rem;
+  width: 12rem;
+  border-radius: 0.5rem;
+}
+.cta__wrapper button:hover {
+  background-color: var(--clr-dark);
+  border: none;
+  color: var(--clr-light);
+  height: 4rem;
+  width: 12rem;
+  border-radius: 0.5rem;
+}
+
+/* CLASSIC COLLECTION */
+.classic {
+  padding: 5rem 0;
+}
+.classic__title {
+  font-family: var(--font-secondary);
+  font-size: var(--h3);
+  color: var(--clr-accent);
+  margin-bottom: 5rem;
+}
+.classic__title h3::after {
+  content: " ";
+  display: inline-block;
+  position: relative;
+  width: 100rem;
+  height: 0.2rem;
+  background-color: var(--clr-accent);
+  right: -1rem;
+  bottom: 0.5rem;
+}
+.classic__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.content {
+  display: flex;
+  font-display: row;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.content img {
+  width: 10rem;
+  height: 12rem;
+}
+.content__txt {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.content__txt small {
+  font-family: var(--font-primary);
+  color: var(--clr-accent);
+  letter-spacing: 1rem;
+}
+.content__txt a {
+  font-family: var(--font-secondary);
+  color: var(--clr-gray);
+}
+.content__txt li i {
+  color: var(--clr-accent);
+}
+.content__txt h6 {
+  font-family: var(--font-primary);
+  font-size: var(--h6);
+  color: var(--clr-gray);
+}
+
+/* FOOTER */
+.footer {
+  padding: 5rem 0;
+  background-color: var(--clr-border);
+  text-align: center;
+  align-items: center;
+  display: flex;
+}
+.footer h3 {
+  font-size: var(--h3);
+  color: var(--clr-gray);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.footer__nav {
+  font-size: small;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.footer__nav a,
+p {
+  color: var(--clr-gray);
+}
+
+/* ABOUT THE RECIPE */
+.aboutBanner {
+  position: relative;
+  display: flex;
+}
+.aboutBanner h3 {
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-secondary);
+  font-size: var(--h3);
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.aboutBanner__wrapper img {
+  height: 60rem;
+  width: 120rem;
+  object-fit: cover;
+}
+.aboutBannner__bg {
+  background-color: var(--clr-border);
+  height: 50rem;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+.aboutBanner__wrapper {
+  display: flex;
+  margin-bottom: 5rem;
+  justify-content: center;
+}
+
+/* MANUAL */
+.manual {
+  padding: 3rem 0;
+  align-items: center;
+}
+.manual__wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 5rem;
+}
+.about__manual h2 {
+  font-family: var(--font-secondary);
+  font-size: var(--h2);
+  margin-bottom: 2rem;
+}
+.about__manual p {
+  text-align: justify;
+  margin-bottom: 2rem;
+  max-width: 60rem;
+}
+
+.imageContent {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  /* align-items: center; */
+  margin-bottom: 2rem;
+}
+.image h3 {
+  font-family: var(--font-secondary);
+  color: var(--clr-accent);
+  font-size: var(--h3);
+  text-align: start;
+  margin-bottom: 3rem;
+}
+.manual__img img {
+  width: 10rem;
+  height: 12rem;
+}
+.manual__txt {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.manual__txt small {
+  font-family: var(--font-primary);
+  color: var(--clr-accent);
+  letter-spacing: 1rem;
+}
+.manual__txt a {
+  font-family: var(--font-secondary);
+  color: var(--clr-gray);
+}
+.manual__txt li i {
+  color: var(--clr-accent);
+}
+.manual__txt h6 {
+  font-family: var(--font-primary);
+  font-size: var(--h6);
+  color: var(--clr-gray);
+}
+
+/* SINGLE PAGE */
+.singleBanner {
+  padding: 3rem 0;
+}
+.singleBannner__bg {
+  background-color: var(--clr-border);
+  height: 60rem;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+.singleBanner__wrapper {
+  display: flex;
+  gap: 3rem;
+}
+.singleBanner__wrapper img {
+  width: 80rem;
+  height: 50rem;
+  object-fit: cover;
+}
+.singleBanner__title {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.singleBanner__title h2 {
+  font-family: var(--font-secondary);
+  font-size: var(--h2);
+}
+.singleText {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+  padding: 1.5rem 0;
+}
+.wrapper__txt {
+  background-color: var(--clr-accent);
+  color: var(--clr-light);
+  padding: 5rem;
+}
+.wrapper__txt h3 {
+  font-family: var(--font-primary);
+  font-size: var(--h3);
+  font-weight: 700;
+}
+.wrapper__txt li {
+  margin-bottom: 1rem;
+  font-size: smaller;
+}
+
+/* DIRECTIONS */
+.directions__wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 5rem;
+}
+.directions__title {
+  font-size: var(--h3);
+  font-family: var(--font-secondary);
+  color: var(--clr-accent);
+  padding: 3rem 0;
+}
+.directions__title h3::after {
+  content: " ";
+  display: inline-block;
+  position: relative;
+  background-color: var(--clr-accent);
+  width: 100rem;
+  height: 0.2rem;
+  left: 1rem;
+  bottom: 0.5rem;
+}
+.step h4 {
+  font-size: var(--h4);
+  color: var(--clr-gray);
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.step p {
+  font-size: small;
+  margin-bottom: 3rem;
+}
+.directions__step ul {
+  display: flex;
+  justify-content: space-between;
+  color: var(--clr-gray);
+  font-weight: 700;
+  border-top: 1px solid rgb(146, 146, 146);
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+}
+.yt h3 {
+  font-size: var(--h3);
+  color: var(--clr-accent);
+  font-family: var(--font-secondary);
+  margin-bottom: 3rem;
+}
+.yt {
+  margin-bottom: 5rem;
+  padding: 3rem 0;
+}
+.and h3 {
+  font-size: var(--h3);
+  color: var(--clr-accent);
+  font-family: var(--font-secondary);
+  margin-bottom: 3rem;
+}
+.and p a {
+  background-color: var(--clr-gray);
+  padding: 0.2rem;
+  border-radius: 1rem;
+  color: var(--clr-dark);
+}
+.and p {
+  padding: 0.5rem;
+}
+
+/* CONTACT US */
+.contact__wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding: 3rem 0;
+}
+.contact__form h3 {
+  font-family: var(--font-secondary);
+  font-size: var(--h3);
+  color: var(--clr-gray);
+  margin-bottom: 3rem;
+}
+.contact__form p {
+  font-size: small;
+  color: var(--clr-gray);
+  margin-bottom: 1rem;
+}
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.conntact__form label {
+  font-size: small;
+  color: var(--clr-gray);
+  margin-top: 1rem;
+}
+.contact__form form input {
+  height: 3rem;
+  width: 80rem;
+}
+.contact__form form textarea {
+  width: 80rem;
+  height: 15rem;
+}
+.contact__form form button {
+  background-color: var(--clr-accent);
+  color: var(--clr-light);
+  margin-top: 2rem;
+  height: 3rem;
+  width: 10rem;
+  border: none;
+}
+.contact__form form button:hover {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  margin-top: 2rem;
+  height: 3rem;
+  width: 10rem;
+  border: none;
+}
+.contact__txt {
+  background-color: var(--clr-accent);
+  color: var(--clr-light);
+  width: 38rem;
+  height: 35rem;
+}
+.contact__info {
+  align-items: center;
+  text-align: justify;
+  margin-left: 4rem;
+}
+.contact__info h3 {
+  font-size: var(--h3);
+  padding: 3rem 0;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-right: 4.5rem;
+  font-weight: 600;
+}
+.contact__info ul {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  gap: 1rem;
+  font-size: small;
+}
+.contact__info li i {
+  margin-right: 1rem;
+}
